@@ -1,0 +1,34 @@
+---
+title: "Index"
+author: "Kieran Healy"
+date: '2023-05-15'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressMessages(library(tidyverse))
+suppressMessages(library(here))
+```
+
+```{r, echo = FALSE}
+fnames <- fs::dir_ls(here::here("slides"), recurse = 1, glob = "*.html") |> 
+  fs::path_file() |> 
+  as_vector()
+
+fpath <- fs::dir_ls(here::here("slides"), recurse = 1, glob = "*.html") |> 
+  fs::path_dir() |> 
+  as_vector()
+
+#tibble::tibble(a = fnames, b =fpath, c = fnames)
+
+
+```
+
+## HTML version of slides
+
+- [01 - Looking at data](01-looking-at-data/01-looking-at-data.html)
+- [02 - ggplot's flow of action](02-ggplots-flow-of-action/02-ggplots-flow-of-action.html)        
+- [03 - Polishingi and presenting plots](03-polishing-and-presenting-plots/03-polishing-and-presenting-plots.html)
+- [04 - Case studies and worked examples](04-case-studies/04-case-studies.html)                  
+ 
